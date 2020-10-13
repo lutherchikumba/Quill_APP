@@ -1,3 +1,95 @@
 // Place all the styles related to the Welcomes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+.default {color: black;}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Green */
+.LogIn {
+  color: green;
+}
+
+.LogIn:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Blue */
+.info {
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+/* Orange */
+.FeaturedTopic {
+  color: orange;
+}
+
+.FeaturedTopic:hover {
+  background: #ff9800;
+  color: white;
+}
+
+/* Red */
+.Community {
+  color: red;
+}
+
+.Community:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* Gray */
+.SignUp {
+  color: black;
+}
+
+.SignUp:hover {
+  background: #e7e7e7;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: larger;
+  font-family: Arial, cursive;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: larger;
+}
