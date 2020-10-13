@@ -1,0 +1,2 @@
+module FeaturedTopicsHelper
+end

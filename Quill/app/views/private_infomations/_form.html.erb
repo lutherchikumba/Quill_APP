@@ -1,0 +1,32 @@
+<%= form_with(model: private_infomation, local: true) do |form| %>
+  <% if private_infomation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(private_infomation.errors.count, "error") %> prohibited this private_infomation from being saved:</h2>
+
+      <ul>
+        <% private_infomation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

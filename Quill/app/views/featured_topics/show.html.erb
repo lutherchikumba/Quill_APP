@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @featured_topic.topic %>
+</p>
+
+<%= link_to 'Edit', edit_featured_topic_path(@featured_topic) %> |
+<%= link_to 'Back', featured_topics_path %>

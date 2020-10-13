@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Private Infomations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Gender</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @private_infomations.each do |private_infomation| %>
+      <tr>
+        <td><%= private_infomation.email %></td>
+        <td><%= private_infomation.phone %></td>
+        <td><%= private_infomation.gender %></td>
+        <td><%= link_to 'Show', private_infomation %></td>
+        <td><%= link_to 'Edit', edit_private_infomation_path(private_infomation) %></td>
+        <td><%= link_to 'Destroy', private_infomation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Private Infomation', new_private_infomation_path %>

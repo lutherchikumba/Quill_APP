@@ -1,0 +1,2 @@
+class FeaturedTopic < ApplicationRecord
+end
