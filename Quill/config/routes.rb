@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :settings
+  resources :archives
+  resources :welcomes
   resources :private_infomations
   resources :profiles
   resources :sign_ups
