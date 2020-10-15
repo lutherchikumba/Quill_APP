@@ -15,7 +15,8 @@ class TopicsTest < ApplicationSystemTestCase
     click_on "New Topic"
 
     fill_in "Author", with: @topic.author
-    fill_in "Topic", with: @topic.topic
+    fill_in "Text", with: @topic.text
+    fill_in "Title", with: @topic.title
     click_on "Create Topic"
 
     assert_text "Topic was successfully created"
@@ -27,7 +28,8 @@ class TopicsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Author", with: @topic.author
-    fill_in "Topic", with: @topic.topic
+    fill_in "Text", with: @topic.text
+    fill_in "Title", with: @topic.title
     click_on "Update Topic"
 
     assert_text "Topic was successfully updated"

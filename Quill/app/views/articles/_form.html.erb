@@ -21,7 +21,10 @@
     <%= form.text_field :topic %>
   </div>
 
-  <div class="actions">
+  <form action="/action_page.php">
+    <input type="file" id="myFile" name="filename">
     <%= form.submit %>
-  </div>
+  </form>
+
+
 <% end %>
