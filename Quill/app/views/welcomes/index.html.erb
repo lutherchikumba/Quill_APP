@@ -1,25 +1,34 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Welcomes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @welcomes.each do |welcome| %>
+<div class="container">
+  <img src="https://images5.alphacoders.com/711/thumb-1920-711435.jpg" alt="Notebook" style="width:100%;">
+  <div class="top-right">
+    <h1>Welcome To Quill!!!</h1>
+    <table>
+      <thead>
       <tr>
-        <td><%= link_to 'Show', welcome %></td>
-        <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
-        <td><%= link_to 'Destroy', welcome, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="topnav">
+          <a class="active" href="log_ins.scss">Log in </a>
+          <a href="sign_ups.scss">Sign up</a>
+          <a href="featured_topics.scss">Featured Topic</a>
+          <a href="featured_articles.scss">Featured Article</a>
+          <a href="welcomes.scss">Community </a>
+          <a href="abouts.scss">About</a>
+        </div>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
 
+      <tbody>
+      <% @welcomes.each do |welcome| %>
+        <tr>
+          <td><%= link_to 'Show', welcome %></td>
+          <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
+          <td><%= link_to 'Destroy', welcome, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 <br>
 
-<%= link_to 'New Welcome', new_welcome_path %>
+<%= link_to 'Welcome', new_welcome_path %>
