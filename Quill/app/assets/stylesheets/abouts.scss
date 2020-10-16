@@ -1,3 +1,47 @@
 // Place all the styles related to the Abouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("journey.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bggg {
+  /* The image used */
+  background-image: url("Quill-02.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container {
+  position: relative;
+  font-family: cursive;
+}
+
+.centered {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -2,6 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 /* Add a black background color to the top navigation */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.topnav {
+  /* The image used */
+  background-image: url("journey.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bggg {
+  /* The image used */
+  background-image: url("Quill-02.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 .topnav {
   background-color: transparent;
@@ -44,3 +74,4 @@
   right: 16px;
   font-size: larger;
 }
+

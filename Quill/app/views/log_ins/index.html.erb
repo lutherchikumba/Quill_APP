@@ -1,30 +1,26 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-  <img src="https://images5.alphacoders.com/711/thumb-1920-711435.jpg" alt="Notebook" style="width:100%;">
-  <div class="centered">
-    <table>
-      <thead>
-      <tr>
-        <h1>Welcome Back!!!</h1>
-        <p>Whether it be a tool for self-expression, a means to be inspired, or a safe-space to write down
-          your most personal thoughts, Quill is here to give you the freedom to be creative without the
-          pressures of social media. NO obsessing on likes. NO obsessing over number of followers. Just writing,
-          reading, and creating. Quill is a time capsule that captures who you are in the words you write.
-          Share what you want with your groups. Save your words for the future. It all begins and ends with YOU. </p>
-        <%= link_to 'Log In', new_log_in_path %>
-      </tr>
-      </thead>
-
-      <tbody>
-      <% @log_ins.each do |log_in| %>
+<div class="bg">
+  <div class="bggg">
+    <div class="centered">
+      <table>
+        <thead>
         <tr>
-          <td><%= link_to 'Show', log_in %></td>
-          <td><%= link_to 'Edit', edit_log_in_path(log_in) %></td>
-          <td><%= link_to 'Destroy', log_in, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <h1>Welcome Back!!!</h1>
+          <%= link_to 'Log In', new_log_in_path %>
         </tr>
-      <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+        <% @log_ins.each do |log_in| %>
+          <tr>
+            <td><%= link_to 'Show', log_in %></td>
+            <td><%= link_to 'Edit', edit_log_in_path(log_in) %></td>
+            <td><%= link_to 'Destroy', log_in, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>>
 <br>
