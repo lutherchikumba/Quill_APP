@@ -74,4 +74,33 @@ body, html {
   right: 16px;
   font-size: larger;
 }
+.info {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: orange;
+  text-decoration: none;
+}
+body, html {
+  background-color: orange;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+}
+.info a1 {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.info a2 {
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+.info a3 {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
 
