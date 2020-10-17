@@ -1,34 +1,48 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-  <img src="https://images5.alphacoders.com/711/thumb-1920-711435.jpg" alt="Notebook" style="width:100%;">
-  <div class="top-right">
-    <h1>Welcome To Quill!!!</h1>
-    <table>
-      <thead>
-      <tr>
-        <div class="topnav">
-          <a class="active" href="log_ins.scss">Log in </a>
-          <a href="sign_ups.scss">Sign up</a>
-          <a href="featured_topics.scss">Featured Topic</a>
-          <a href="featured_articles.scss">Featured Article</a>
-          <a href="welcomes.scss">Community </a>
-          <a href="abouts.scss">About</a>
-        </div>
-      </tr>
-      </thead>
+<div class="topnav">
+  <div class="bggg">
+    <div class="container">
+      <div class="top-right">
+        <h1>Welcome To Quill!!!</h1>
+        <table>
+          <thead>
+          <tr>
+            <div class="topnav">
+              <a class="active" href="log_ins.scss">Log in </a>
+              <a href="sign_ups.scss">Sign up</a>
+              <a href="featured_topics.scss">Featured Topic</a>
+              <a href="featured_articles.scss">Featured Article</a>
+              <a href="welcomes.scss">Community </a>
+              <a href="abouts.scss">About</a>
+            </div>
+          </tr>
+          </thead>
 
-      <tbody>
-      <% @welcomes.each do |welcome| %>
-        <tr>
-          <td><%= link_to 'Show', welcome %></td>
-          <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
-          <td><%= link_to 'Destroy', welcome, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-        </tr>
-      <% end %>
-      </tbody>
-    </table>
+          <tbody>
+          <% @welcomes.each do |welcome| %>
+            <tr>
+              <td><%= link_to 'Show', welcome %></td>
+              <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
+              <td><%= link_to 'Destroy', welcome, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 <br>
 
-<%= link_to 'Welcome', new_welcome_path %>
+<!-- <%= link_to 'Welcome', new_welcome_path %> -->
+<div class="info">
+<table>
+  <thead>
+  <tr>
+      <a1> Wave the world with words. </a1>
+      <a2> A Semi-Social Network, a healthy social media. </a2>
+      <a3> Read to learn, write to express. Create your world. </a3>
+  </tr>
+  </thead>
+</table>
+</div>

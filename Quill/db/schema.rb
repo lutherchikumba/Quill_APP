@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_172744) do
+ActiveRecord::Schema.define(version: 2020_10_16_153336) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -44,6 +44,11 @@ ActiveRecord::Schema.define(version: 2020_10_13_172744) do
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "topic"
+    t.string "article"
+    t.string "about"
+    t.string "archive"
+    t.string "setting"
   end
 
   create_table "log_ins", force: :cascade do |t|
@@ -80,7 +85,8 @@ ActiveRecord::Schema.define(version: 2020_10_13_172744) do
 
   create_table "topics", force: :cascade do |t|
     t.string "author"
-    t.string "topic"
+    t.string "title"
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

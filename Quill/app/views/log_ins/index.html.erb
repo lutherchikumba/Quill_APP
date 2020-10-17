@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
+<div class="bg">
+  <div class="bggg">
+    <div class="centered">
+      <table>
+        <thead>
+        <tr>
+          <h1>Welcome Back!!!</h1>
+          <%= link_to 'Log In', new_log_in_path %>
+        </tr>
+        </thead>
 
-<h1>Log Ins</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @log_ins.each do |log_in| %>
-      <tr>
-        <td><%= link_to 'Show', log_in %></td>
-        <td><%= link_to 'Edit', edit_log_in_path(log_in) %></td>
-        <td><%= link_to 'Destroy', log_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+        <tbody>
+        <% @log_ins.each do |log_in| %>
+          <tr>
+            <td><%= link_to 'Show', log_in %></td>
+            <td><%= link_to 'Edit', edit_log_in_path(log_in) %></td>
+            <td><%= link_to 'Destroy', log_in, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>>
 <br>
-
-<%= link_to 'New Log In', new_log_in_path %>

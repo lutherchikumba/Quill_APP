@@ -2,8 +2,10 @@
 
 one:
   author: MyString
-  topic: MyString
+  title: MyString
+  text: MyString
 
 two:
   author: MyString
-  topic: MyString
+  title: MyString
+  text: MyString
