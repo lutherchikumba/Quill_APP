@@ -76,15 +76,9 @@ body, html {
 }
 .info {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 40vh;
   background-color: orange;
   text-decoration: none;
-}
-body, html {
-  background-color: orange;
-  text-align: center;
-  height: 100%;
-  margin: 0;
 }
 .info a1 {
   text-align: center;
@@ -103,4 +97,30 @@ body, html {
   text-decoration: none;
   font-size: 20px;
 }
+.about {
+  width: 100vw;
+  min-height: 40vh;
+  background-color: orangered;
+  text-decoration: none;
+}
+.about p1 {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.sec_4 {
+  width: 100vw;
+  min-height: 20vh;
+
+  background-color: white;
+  text-decoration: none;
+}
+.sec_4 p2{
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 
