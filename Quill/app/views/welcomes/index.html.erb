@@ -1,50 +1,49 @@
 <p id="notice"><%= notice %></p>
-<div class="topnav">
-  <div class="bggg">
-    <div class="container">
-      <div class="top-right">
-        <h1>Welcome To Quill!!!</h1>
-        <table>
-          <thead>
-          <tr>
-            <div class="topnav">
-              <a class="active" href="log_ins.scss">Log in </a>
-              <a href="sign_ups.scss">Sign up</a>
-              <a href="featured_topics.scss">Featured Topic</a>
-              <a href="featured_articles.scss">Featured Article</a>
-              <a href="welcomes.scss">Community </a>
-              <a href="abouts.scss">About</a>
-            </div>
-          </tr>
-          </thead>
+<%= image_tag("journey.jpg", :class => "style_image") %>
+<div class="top-right">
+  <div class="container">
 
-          <tbody>
-          <% @welcomes.each do |welcome| %>
-            <tr>
-              <td><%= link_to 'Show', welcome %></td>
-              <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
-              <td><%= link_to 'Destroy', welcome, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-            </tr>
-          <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
+
+    <h1>Welcome To Quill!!!</h1>
+    <table>
+      <thead>
+      <tr>
+        <div class="topnav">
+          <a class="active" href="log_ins.scss">Log in </a>
+          <a href="sign_ups.scss">Sign up</a>
+          <a href="featured_topics.scss">Featured Topic</a>
+          <a href="featured_articles.scss">Featured Article</a>
+          <a href="welcomes.scss">Community </a>
+          <a href="abouts.scss">About</a>
+        </div>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @welcomes.each do |welcome| %>
+        <tr>
+          <td><%= link_to 'Show', welcome %></td>
+          <td><%= link_to 'Edit', edit_welcome_path(welcome) %></td>
+          <td><%= link_to 'Destroy', welcome, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
-<br>
+
 
 <!-- <%= link_to 'Welcome', new_welcome_path %> -->
 <div class="info">
-<table>
-  <thead>
-  <tr>
-      <a1> Weave the world with words. </a1>
-      <a2> A Semi-Social Network, a healthy social media. </a2>
-      <a3> Read to learn, write to express. Create your world. </a3>
-  </tr>
-  </thead>
-</table>
+  <table>
+    <thead>
+    <tr>
+      <a> Weave the world with words. </a>
+      <a> A Semi-Social Network, a healthy social media. </a>
+      <a> Read to learn, write to express. Create your world. </a>
+    </tr>
+    </thead>
+  </table>
 </div>
 
 <div class="about">
@@ -55,7 +54,8 @@
         your most personal thoughts, Quill is here to give you the freedom to be creative without the
         pressures of social media. NO obsessing on likes. NO obsessing over number of followers. Just writing,
         reading, and creating. Quill is a time capsule that captures who you are in the words you write.
-        Share what you want with your groups. Save your words for the future. It all begins and ends with YOU. </p1>
+        Share what you want with your groups. Save your words for the future. It all begins and ends with YOU.
+      </p1>
     </tr>
     </thead>
   </table>
@@ -65,7 +65,7 @@
   <table>
     <thead>
     <tr>
-      <p2>If you HAVE to use Social Media, then see what others say about us!! </p2>
+      <p2>If you HAVE to use Social Media, then see what others say about us!!</p2>
     </tr>
     </thead>
   </table>
@@ -75,19 +75,19 @@
 
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <%= image_tag("quillicon.png" ) %>
+    <%= image_tag("quillicon.png", :class => "style_image") %>
     <div class="text">Caption Text</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <%= image_tag("Quill-02.jpg") %>
+    <%= image_tag("Quill-02.jpg", :class => "style_image") %>
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <%= image_tag("quillicon.png") %>
+    <%= image_tag("quillicon.png", :class => "style_image") %>
     <div class="text">Caption Three</div>
   </div>
 
@@ -120,16 +120,23 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
 </script>
+
+<br>
+
 
