@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class LogInsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @log_in = log_ins(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

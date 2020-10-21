@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class PrivateInfomationsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @private_infomation = private_infomations(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

@@ -1,6 +1,6 @@
 class SignUpsController < ApplicationController
   before_action :set_sign_up, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /sign_ups
   # GET /sign_ups.json
   def index

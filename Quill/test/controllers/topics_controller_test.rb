@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class TopicsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @topic = topics(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

@@ -1,6 +1,6 @@
 class FeaturedTopicsController < ApplicationController
   before_action :set_featured_topic, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /featured_topics
   # GET /featured_topics.json
   def index

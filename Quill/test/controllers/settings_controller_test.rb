@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class SettingsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @setting = settings(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

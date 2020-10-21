@@ -1,6 +1,6 @@
 class ArchivesController < ApplicationController
   before_action :set_archive, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /archives
   # GET /archives.json
   def index

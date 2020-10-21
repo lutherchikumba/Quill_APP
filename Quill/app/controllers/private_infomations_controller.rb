@@ -1,6 +1,6 @@
 class PrivateInfomationsController < ApplicationController
   before_action :set_private_infomation, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /private_infomations
   # GET /private_infomations.json
   def index
