@@ -9,11 +9,11 @@
       <thead>
       <tr>
         <div class="topnav">
-          <a class="active" href="log_ins.scss">Log in </a>
-          <a href="sign_ups.scss">Sign up</a>
+          <a class="active" href="welcomes.scss"><%= button_to "Login", '/users/sign_in/', method: :get%></a>
+          <a class="active" href="welcomes.scss"><%= button_to "Sign Up", '/users/sign_up', method: :get%></a>
           <a href="featured_topics.scss">Featured Topic</a>
           <a href="featured_articles.scss">Featured Article</a>
-          <a href="welcomes.scss">Community </a>
+          <a href="homes.scss">Home </a>
           <a href="abouts.scss">About</a>
         </div>
       </tr>
