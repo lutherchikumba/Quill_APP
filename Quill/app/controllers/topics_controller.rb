@@ -5,11 +5,14 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     @topics = Topic.all
+    @comments = Comment.all
   end
 
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @comments = @topic.comments.all
+    @comment = @topic.comments.build
   end
 
   # GET /topics/new

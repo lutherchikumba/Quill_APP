@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_22_002745) do
+ActiveRecord::Schema.define(version: 2020_10_23_171015) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2020_10_22_002745) do
   create_table "articles", force: :cascade do |t|
     t.string "author"
     t.string "topic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "user_name"
+    t.text "body"
+    t.integer "topic_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -51,11 +59,6 @@ ActiveRecord::Schema.define(version: 2020_10_22_002745) do
     t.string "setting"
   end
 
-  create_table "log_ins", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "private_infomations", force: :cascade do |t|
     t.string "email"
     t.integer "phone"
@@ -74,11 +77,6 @@ ActiveRecord::Schema.define(version: 2020_10_22_002745) do
   end
 
   create_table "settings", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sign_ups", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
