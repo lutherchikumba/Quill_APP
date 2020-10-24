@@ -1,15 +1,18 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /topics
   # GET /topics.json
   def index
     @topics = Topic.all
+    @comments = Comment.all
   end
 
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @comments = @topic.comments.all
+    @comment = @topic.comments.build
   end
 
   # GET /topics/new

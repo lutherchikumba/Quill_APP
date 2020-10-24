@@ -1,5 +1,5 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class WelcomesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @welcome = welcomes(:one)

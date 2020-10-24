@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :comments
+  get 'comment/store'
+  post 'comment/store'
+  root 'topics#index'
+  devise_for :users
   resources :topics
   get 'sessions/new'
   resources :settings

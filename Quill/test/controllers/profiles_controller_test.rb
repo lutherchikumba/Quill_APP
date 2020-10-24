@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class ProfilesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @profile = profiles(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

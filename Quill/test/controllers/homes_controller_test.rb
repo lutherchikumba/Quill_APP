@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class HomesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @home = homes(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class ArchivesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @archive = archives(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

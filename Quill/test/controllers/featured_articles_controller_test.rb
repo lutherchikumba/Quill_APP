@@ -1,8 +1,9 @@
 require 'test_helper'
-
+include Devise::Test::IntegrationHelpers
 class FeaturedArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @featured_article = featured_articles(:one)
+    sign_in users(:one)
   end
 
   test "should get index" do

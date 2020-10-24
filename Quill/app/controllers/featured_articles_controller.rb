@@ -1,6 +1,6 @@
 class FeaturedArticlesController < ApplicationController
   before_action :set_featured_article, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /featured_articles
   # GET /featured_articles.json
   def index
