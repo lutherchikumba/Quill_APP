@@ -1,39 +1,45 @@
 <p id="notice"><%= notice %></p>
-<div class="bg">
-  <div class="bggg">
-    <div class="container">
-      <table>
-        <thead>
-        <tr>
-          <div class="text-block">
-            <a class="active" href="topics.scss">Topics </a>
-            <a href="articles.scss">Articles</a>
-            <a href="featured_topics.scss">Featured Topic</a>
-            <a href="featured_articles.scss">Featured Article</a>
-            <a href="archives.scss">Archive</a>
-            <a href="settings.scss">Settings</a>
-            <a href="welcomes.scss">Community </a>
-            <a href="abouts.scss">About</a>
-          </div>
-        </tr>
-        </thead>
+<%= image_tag("Quill-02.jpg", :class => "style_image_quill") %>
+<div class="message">
+  <p> Save your words for the future.</p>
+  <p> It all begins and ends with YOU.</p>
+</div>
+<%= image_tag("quillicon.png", :class => "style_image") %>
 
-        <tbody>
-        <% @homes.each do |home| %>
-          <tr>
-            <td><%= link_to 'Show', home %></td>
-            <td><%= link_to 'Edit', edit_home_path(home) %></td>
-            <td><%= link_to 'Destroy', home, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-    </div>
+
+
+<div class="centered">
+
+  <div class="container">
+    <table>
+      <thead>
+      <tr>
+        <button-block class="button-block button1" href="topics.scss">Topics</button-block>
+        <button-block class="button-block button2" href="articles.scss">Articles</button-block>
+        <button-block class="button-block button3" href="featured_topics.scss">Featured Topic</button-block>
+        <button-block class="button-block button4" href="featured_articles.scss">Featured Article</button-block>
+        <button-block class="button-block button5" href="archives.scss">Archive</button-block>
+        <button-block class="button-block button6" href="settings.scss">Settings</button-block>
+        <button-block class="button-block button7" href="welcomes.scss">Community</button-block>
+        <button-block class="button-block button8" href="abouts.scss">About</button-block>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <% @homes.each do |home| %>
+        <tr>
+          <td><%= link_to 'Show', home %></td>
+          <td><%= link_to 'Edit', edit_home_path(home) %></td>
+          <td><%= link_to 'Destroy', home, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
-
 
 <br>
 
 <%= link_to 'New Home', new_home_path %>
-<%= link_to 'Log out',   destroy_user_session_path,method: :delete%>
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
