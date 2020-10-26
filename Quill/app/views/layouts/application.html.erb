@@ -8,7 +8,32 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <%= image_tag("quillicon.png", :class => "style_image") %>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="profiles.scss">Profile</a>
+    <a href="services.scss">Services</a>
+    <a href="settings.scss">Settings</a>
+    <a href="contact_us.scss">Contact</a>
+    <a href="calender.scss">Calender</a>
+    <a href="help.scss">Help</a>
+    <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+  </div>
+  <div class="top-left">
+    <p>Click on the element below to open the side navigation menu.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+  </div>>
+  <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+      }
 
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+      }
+  </script>
+
+  </div>
   <body>
     <%= yield %>
   </body>
