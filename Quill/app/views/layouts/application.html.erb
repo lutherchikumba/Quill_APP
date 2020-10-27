@@ -8,7 +8,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <%= image_tag("quillicon.png", :class => "style_image") %>
+  <body>
+  <%= yield %>
+
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="profiles.scss">Profile</a>
@@ -19,22 +21,25 @@
     <a href="help.scss">Help</a>
     <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
   </div>
-  <div class="top-left">
-    <p>Click on the element below to open the side navigation menu.</p>
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
-  </div>>
+  </body>
+  <div class="top-right ">
+    <div id="main">
+      <p>Click on the element below to open the side navigation menu.</p>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+    </div>
+  </div>
   <script>
       function openNav() {
           document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
       }
 
       function closeNav() {
           document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";
       }
   </script>
-
   </div>
-  <body>
-    <%= yield %>
-  </body>
 </html>

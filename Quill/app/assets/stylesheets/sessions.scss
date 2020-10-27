@@ -1,3 +1,58 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.info {
+  width: 100vw;
+  min-height: 40vh;
+  background-color: orange;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+  font-style: oblique;
+  text-decoration: none;
+}
+.info a {
+  line-height: 200px;
+  margin-top: -100px;
+}
+
+.about {
+  width: 100vw;
+  min-height: 40vh;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: orangered;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  font-style: oblique;
+  text-decoration: none;
+}
+
+.about p1 {
+  line-height: 75px;
+  margin-top: -100px;
+  font-size: 20px;
+  font-style: oblique;
+}
+.sec_4 {
+  width: 100vw;
+  min-height: 10vh;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: red;
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  font-style: oblique;
+  text-decoration: none;
+}
+.sec_4 p2 {
+  line-height: 75px;
+  margin-top: -100px;
+  font-size: 20px;
+  font-style: oblique;
+}
