@@ -20,13 +20,10 @@
     top: 8px;
     right: 16px;
 }
-body {
-    font-family: "Lato", sans-serif;
-    transition: background-color .5s;
-}
-
 .style_image {
     background-image: url(quillicon.png);
+    height: 100%;
+    width: 100%;
 }
 
 .sidenav {
