@@ -11,9 +11,15 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 0) do
 =======
 ActiveRecord::Schema.define(version: 2020_10_23_171015) do
+||||||| 005c20b
+ActiveRecord::Schema.define(version: 2020_10_16_153336) do
+=======
+ActiveRecord::Schema.define(version: 2020_10_23_171015) do
+>>>>>>> Topic/Discussion
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -62,11 +68,6 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
     t.string "setting"
   end
 
-  create_table "log_ins", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "private_infomations", force: :cascade do |t|
     t.string "email"
     t.integer "phone"
@@ -85,11 +86,6 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
   end
 
   create_table "settings", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sign_ups", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

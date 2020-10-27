@@ -1,0 +1,65 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+<div class="info">
+  <table>
+    <thead>
+    <tr>
+      <a> Weave the world with words. </a>
+      <a> A Semi-Social Network, a healthy social media. </a>
+      <a> Read to learn, write to express. Create your world. </a>
+    </tr>
+    </thead>
+  </table>
+</div>
+
+<div class="about">
+  <table>
+    <thead>
+    <tr>
+      <p1>Whether it be a tool for self-expression, a means to be inspired, or a safe-space to write down
+        your most personal thoughts, Quill is here to give you the freedom to be creative without the
+        pressures of social media. NO obsessing on likes. NO obsessing over number of followers. Just writing,
+        reading, and creating. Quill is a time capsule that captures who you are in the words you write.
+        Share what you want with your groups. Save your words for the future. It all begins and ends with YOU.
+      </p1>
+    </tr>
+    </thead>
+  </table>
+</div>
+
+<div class="sec_4">
+  <table>
+    <thead>
+    <tr>
+      <p2>If you HAVE to use Social Media, then see what others say about us!!</p2>
+    </tr>
+    </thead>
+  </table>
+</div>

@@ -1,36 +1,13 @@
 // Place all the styles related to the Homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("journey.jpg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bggg {
-  /* The image used */
-  background-image: url("Quill-02.jpg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
+.style_image_quill {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  min-height: 10%;
 }
 
 .container {
@@ -38,37 +15,87 @@ body, html {
   text-align: center;
   color: red;
 }
-
-/* Bottom right text */
-.text-block {
+/* Centered text */
+.centered {
   position: absolute;
-  top: 50px;
-  right: 40px;
-  background-color: red;
-  color: red;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.text-block a:hover {
-  background-color: black;
-  color: white;
-}
-.text-block a {
-  float: left;
-  background-color: black;
-  color: red;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.text-block a.active {
-  background-color: #4CAF50;
-  color: white;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-.text-block {
-  overflow: hidden;
+.message {
+  position: absolute;
+  color: black;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: transparent;
+  font-size: 40px;
+  font-style: oblique;
+}
+.button-block {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {border-radius: 12px;background-color: yellowgreen; /* yellogreen */}
+.button2 {border-radius: 12px;background-color: indianred; /* indianred */}
+.button3 {border-radius: 12px;background-color: cadetblue; /* cadetblue */}
+.button4 {border-radius: 12px;background-color: limegreen; /* limegreen */}
+.button5 {border-radius: 12px;background-color: dodgerblue; /* dodgerblue */}
+.button6 {border-radius: 12px;background-color: darkolivegreen; /* darkolivegreen */}
+.button7 {border-radius: 12px;background-color: peachpuff; /* peachpuff */}
+.button8 {border-radius: 12px;background-color: mediumpurple; /* mediumpurple */}
+
+.button-block:hover {
+  background-color: black;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
