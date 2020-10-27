@@ -1,18 +1,6 @@
 // Place all the styles related to the Homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-body, html {
-  max-width: min-content;
-  background: white;
-  height: 100%;
-  margin: 0;
-}
-
-.style_image {
-  width: 100vw;
-  min-height: 40vh;
-}
 .style_image_quill {
   position: absolute;
   top: 20%;
@@ -30,23 +18,23 @@ body, html {
 /* Centered text */
 .centered {
   position: absolute;
-  top: 60%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .message {
   position: absolute;
+  color: black;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
-  font-size: 32px;
+  font-size: 40px;
   font-style: oblique;
 }
 .button-block {
   border: none;
-  color: white;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -67,4 +55,47 @@ body, html {
 
 .button-block:hover {
   background-color: black;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

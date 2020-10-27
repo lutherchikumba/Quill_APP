@@ -1,27 +1,23 @@
 <p id="notice"><%= notice %></p>
+<%= image_tag("quillicon.png", :class => "style_image") %>
 <%= image_tag("Quill-02.jpg", :class => "style_image_quill") %>
 <div class="message">
   <p> Save your words for the future.</p>
   <p> It all begins and ends with YOU.</p>
 </div>
-<%= image_tag("quillicon.png", :class => "style_image") %>
-
-
-
 <div class="centered">
-
   <div class="container">
     <table>
       <thead>
       <tr>
-        <button-block class="button-block button1" href="topics.scss">Topics</button-block>
-        <button-block class="button-block button2" href="articles.scss">Articles</button-block>
-        <button-block class="button-block button3" href="featured_topics.scss">Featured Topic</button-block>
-        <button-block class="button-block button4" href="featured_articles.scss">Featured Article</button-block>
-        <button-block class="button-block button5" href="archives.scss">Archive</button-block>
-        <button-block class="button-block button6" href="settings.scss">Settings</button-block>
-        <button-block class="button-block button7" href="welcomes.scss">Community</button-block>
-        <button-block class="button-block button8" href="abouts.scss">About</button-block>
+        <a class="button-block button1" href="topics.scss">Topics</a>
+        <a class="button-block button2" href="articles.scss">Articles</a>
+        <a class="button-block button3" href="featured_topics.scss">Featured Topic</a>
+        <a class="button-block button4" href="featured_articles.scss">Featured Article</a>
+        <a class="button-block button5" href="archives.scss">Archive</a>
+        <a class="button-block button6" href="settings.scss">Settings</a>
+        <a class="button-block button7" href="welcomes.scss">Community</a>
+        <a class="button-block button8" href="abouts.scss">About</a>
       </tr>
       </thead>
 
@@ -38,8 +34,36 @@
     </table>
   </div>
 </div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="profiles.scss">Profile</a>
+  <a href="services.scss">Services</a>
+  <a href="settings.scss">Settings</a>
+  <a href="contact_us.scss">Contact</a>
+  <a href="calender.scss">Calender</a>
+  <a href="help.scss">Help</a>
+  <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+</div>
+<div class="top-right ">
+  <div id="main">
+    <p>Click on the element below to open the side navigation menu.</p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+  </div>
+</div>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+    }
+</script>
 <br>
 
-<%= link_to 'New Home', new_home_path %>
-<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+<!-- <%= link_to 'New Home', new_home_path %>
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %> !>
