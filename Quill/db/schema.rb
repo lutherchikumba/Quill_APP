@@ -59,11 +59,6 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
     t.string "setting"
   end
 
-  create_table "log_ins", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "private_infomations", force: :cascade do |t|
     t.string "email"
     t.integer "phone"
@@ -86,11 +81,6 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "sign_ups", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "topics", force: :cascade do |t|
     t.string "author"
     t.string "title"
@@ -109,11 +99,6 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "welcomes", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
