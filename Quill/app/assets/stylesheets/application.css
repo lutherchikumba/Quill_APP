@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    background-image: url(quillicon.png);
+    background-size: cover;
 /* Top right text */
 .top-right {
     position: absolute;
@@ -26,46 +31,46 @@
     width: 100%;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+.container-two {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    font-style: oblique;
 }
 
-.sidenav a {
-    padding: 60px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
+/* Top right text */
+.top-right {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    top: 8px;
+    right: 16px;
+
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
+.navybar {
+    background-color: black;
+    overflow: hidden;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+/* Style the links inside the navigation bar */
+.navybar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-style: oblique;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navybar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navybar a.active {
+    background-color: #4CAF50;
+    color: white;
 }
