@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_23_171015) do
+ActiveRecord::Schema.define(version: 2020_11_11_182446) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
 
   create_table "articles", force: :cascade do |t|
     t.string "author"
-    t.string "topic"
+    t.string "title"
+    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -83,8 +84,8 @@ ActiveRecord::Schema.define(version: 2020_10_23_171015) do
 
   create_table "topics", force: :cascade do |t|
     t.string "author"
-    t.string "title"
-    t.string "text"
+    t.string "discussion"
+    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  resources :topics
+  resources :articles
   resources :comments
   get 'comment/store'
   post 'comment/store'
   root 'homes#index'
   devise_for :users
-  resources :topics
   get 'sessions/new'
   resources :settings
   resources :archives
@@ -14,7 +15,6 @@ Rails.application.routes.draw do
   resources :sign_ups
   resources :log_ins
   resources :featured_articles
-  resources :articles
   resources :abouts
   resources :featured_topics
   resources :homes

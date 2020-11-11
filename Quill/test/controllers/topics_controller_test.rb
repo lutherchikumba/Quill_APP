@@ -1,9 +1,8 @@
 require 'test_helper'
-include Devise::Test::IntegrationHelpers
+
 class TopicsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @topic = topics(:one)
-    sign_in users(:one)
   end
 
   test "should get index" do
@@ -18,7 +17,7 @@ class TopicsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create topic" do
     assert_difference('Topic.count') do
-      post topics_url, params: { topic: { author: @topic.author, text: @topic.text, title: @topic.title } }
+      post topics_url, params: { topic: { author: @topic.author, discussion: @topic.discussion, text: @topic.text } }
     end
 
     assert_redirected_to topic_url(Topic.last)
@@ -35,7 +34,7 @@ class TopicsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update topic" do
-    patch topic_url(@topic), params: { topic: { author: @topic.author, text: @topic.text, title: @topic.title } }
+    patch topic_url(@topic), params: { topic: { author: @topic.author, discussion: @topic.discussion, text: @topic.text } }
     assert_redirected_to topic_url(@topic)
   end
 
