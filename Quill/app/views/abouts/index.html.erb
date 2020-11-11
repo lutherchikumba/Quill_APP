@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-    <div class="centered">
+    <div class="centered-one">
       <table>
         <thead>
         <tr>
@@ -10,18 +10,23 @@
             Share what you want with your groups. Save your words for the future. It all begins and ends with YOU. </p>
         </tr>
         </thead>
-
-        <tbody>
-        <% @abouts.each do |about| %>
-          <tr>
-            <td><%= link_to 'Show', about %></td>
-            <td><%= link_to 'Edit', edit_about_path(about) %></td>
-            <td><%= link_to 'Destroy', about, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-          </tr>
-        <% end %>
-        </tbody>
       </table>
-</div>>
+</div>
+<div class="top-right ">
+  <div class="container-two">
+    <div class="navybar">
+      <a  href="topics.scss">Topics</a>
+      <a  href="articles.scss">Articles</a>
+      <a  href="featured_topics.scss">Featured Topic</a>
+      <a  href="featured_articles.scss">Featured Article</a>
+      <a  href="archives.scss">Archive</a>
+      <a  href="settings.scss">Settings</a>
+      <a  href="welcomes.scss">Community</a>
+      <a  href="abouts.scss">About</a>
+    </div>
+  </div>
+</div>
 <br>
+
 <!-- <%= link_to 'New About', new_about_path %>
 <%= link_to 'Log out',   destroy_user_session_path,method: :delete%>
